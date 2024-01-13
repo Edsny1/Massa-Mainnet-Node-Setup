@@ -30,11 +30,13 @@ Screen açıyoruz. ( We open the screen)
 -	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 -	1 seçiyoruz
 -	source $HOME/.cargo/env
+  
 Versiyon Kontrol edelim ( Version Control )( Optional)
 -	rustc –version
 -	rustup toolchain install 1.74.1
 -	rustup default 1.74.1
--	rustc –version (Çıktı 1.74.1 olmalı) (Optional)
+-	rustc –version
+  (Çıktı 1.74.1 olmalı) (Optional)
 
 6-Repoyu Kopyalayalım ( Clone this repo )
 -	git clone https://github.com/massalabs/massa.git
