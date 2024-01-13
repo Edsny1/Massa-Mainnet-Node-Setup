@@ -82,6 +82,7 @@ Client’in olduğu screen giriyoruz. (We enter the window there the client is)
 -	cd massa/massa-client/
 -	cargo run
 -	wallet_add_secret_keys <your_secret_key>
+
 Cüzdanımızı ekledik. (Wallet Add)
 
 
