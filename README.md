@@ -10,7 +10,8 @@ Massalabs Mainnet Installing a node
 -	sudo apt-get upgrade
 
 2-Screen açabilmek için screen yüklüyoruz. ( We are loading screen)
--	Sudo apt install screen
+-	sudo apt install screen
+
 Screen açıyoruz. ( We open the screen)
 -	screen -S Massa
 
