@@ -32,17 +32,17 @@ Screen açıyoruz. ( We open the screen)
 -	source $HOME/.cargo/env
   
 Versiyon Kontrol edelim ( Version Control )( Optional)
--	rustc –version
+-	rustc --version
 -	rustup toolchain install 1.74.1
 -	rustup default 1.74.1
--	rustc –version
+-	rustc --version
   (Çıktı 1.74.1 olmalı) (Optional)
 
 6-Repoyu Kopyalayalım ( Clone this repo )
 -	git clone https://github.com/massalabs/massa.git
 
 7-Sunucu İp Adresimizi Kaydedelim ( Let’s save our Server Ip Address )
--	massa-node/config/config.toml
+-	nano massa/massa-node/config/config.toml
 
 Açılan sayfada ( On the opened page );
 -	[protocol]
@@ -53,16 +53,18 @@ routable_ip = "AAA.BBB.CCC.DDD"
 **** Sunucunuz destekliyorsa IPV6 kullanabilirsiniz. ( IPV6 is also supported. )
 
 -	Ctrl X daha sonra Y ile kaydedip Enter ile çıkıyoruz. ( Ctrl X then save with Y and exit with Enter )
--	get_status (Kontrol Ediyoruz) (We Check)
+-	Massa Client içerisinde < get_status > (Kontrol Ediyoruz) (We Check)
 -	Node's IP: AAA.BBB.CCC.DDD  (Çıktı bu şekkilde olmalı) ( The output should be like this )
 
 *** “ No routable IP ” çıktısı alıyorsanız 7.adımı tekrar yapalım. ( If the output is like this, let’s repeat step 7. )
 
-8-Düğümü Yapılandırma ( Configure the Node )
+8-Düğüm başlatma ( Start the node );
 -	cd massa/massa-node/
--	./massa-node -p <PASSWORD> |& tee logs.txt
+-	RUST_BACKTRACE=full cargo run --release -- -p <PASSWORD> |& tee logs.txt
 
 *** <PASSWORD>  kısmına unutmayacağınız bir şifre belirleyin.) (Replace <PASSWORD> with a password that you will need to keep to restart your node. You should leave the window open. )
+
+Düğümümüzü başlattık.
 
 9-İkinci bir Screen açalım ( Let’s open a second screen );
 -	cd massa/massa-client/
@@ -70,16 +72,9 @@ routable_ip = "AAA.BBB.CCC.DDD"
 
 *** <PASSWORD> 8. Adımda belirlediğimiz şifreyi kullanabiliriz. (Replace <PASSWORD> with a password that you will need to keep to restart your client)
 
-10- Düğüm başlatma ( Start the node );
-İlk Screen’e geri dönüyoruz ( In a first Window )
--	cd massa/massa-node/
--	RUST_BACKTRACE=full cargo run --release -- -p <PASSWORD> |& tee logs.txt
-*** <PASSWORD> kısmına 8. Adımda belirlediğimiz şifreyi yazıyoruz. (We write the password we determined in step 8.)
-
-Düğümümüzü başlattık.
 
  
-11- Client Başlatma. (Start the Client)
+10- Client Başlatma. (Start the Client)
 İkinci Screen’e geri dönüyoruz. (In a second Window)
 -	cd massa/massa-client/
 -	cargo run --release -- -p <PASSWORD>
@@ -87,19 +82,19 @@ Düğümümüzü başlattık.
 
 ***** Screen’ler arası geçişi Ctrl A+P ile yapabilirsiniz.
 
-12- Cüzdan Ekleme (Add Wallet);
+11- Cüzdan Ekleme (Add Wallet);
 Client’in olduğu screen giriyoruz. (We enter the window there the client is)
 -	cd massa/massa-client/
 -	cargo run
 -	wallet_add_secret_keys <your_secret_key>
 Cüzdanımızı ekledik. (Wallet Add)
-13- Cüzdan bakiye ve bilgilerini kontrol etmek için ( Wallet info )
+12- Cüzdan bakiye ve bilgilerini kontrol etmek için ( Wallet info )
 -	wallet_info
 *Adres keyleri için ( Public key’s addresse)
 -	wallet_get_public_key <Address1> <Address2>
 -	wallet_get_secret_key <Address1> <Address2>
 
-14- Roll Satın almak ve Stake işlemi( Buying Rolls and Staking)
+13- Roll Satın almak ve Stake işlemi( Buying Rolls and Staking)
 -	wallet_info
 -	buy_rolls <address> <roll count> <fee>
 Örnek (Example): 
