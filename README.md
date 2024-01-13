@@ -67,18 +67,13 @@ routable_ip = "AAA.BBB.CCC.DDD"
 Düğümümüzü başlattık.
 
 9-İkinci bir Screen açalım ( Let’s open a second screen );
+Client Başlatma. (Start the Client)
 -	cd massa/massa-client/
--	./massa-client -p <PASSWORD>
+-	cargo run --release -- -p "PASSWORD"
 
 *** <PASSWORD> 8. Adımda belirlediğimiz şifreyi kullanabiliriz. (Replace <PASSWORD> with a password that you will need to keep to restart your client)
 
 
- 
-10- Client Başlatma. (Start the Client)
-İkinci Screen’e geri dönüyoruz. (In a second Window)
--	cd massa/massa-client/
--	cargo run --release -- -p <PASSWORD>
-*** <PASSWORD> kısmına 9.Adımda belirlediğimiz şifreyi yazıyoruz. ( We write the password we determined in step 8.)
 
 ***** Screen’ler arası geçişi Ctrl A+P ile yapabilirsiniz.
 
@@ -88,6 +83,8 @@ Client’in olduğu screen giriyoruz. (We enter the window there the client is)
 -	cargo run
 -	wallet_add_secret_keys <your_secret_key>
 Cüzdanımızı ekledik. (Wallet Add)
+
+
 12- Cüzdan bakiye ve bilgilerini kontrol etmek için ( Wallet info )
 -	wallet_info
 *Adres keyleri için ( Public key’s addresse)
