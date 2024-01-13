@@ -60,9 +60,9 @@ routable_ip = "AAA.BBB.CCC.DDD"
 
 8-Düğüm başlatma ( Start the node );
 -	cd massa/massa-node/
--	RUST_BACKTRACE=full cargo run --release -- -p <PASSWORD> |& tee logs.txt
+-	RUST_BACKTRACE=full cargo run --release -- -p < PASSWORD > |& tee logs.txt
 
-*** <PASSWORD>  kısmına unutmayacağınız bir şifre belirleyin.) (Replace <PASSWORD> with a password that you will need to keep to restart your node. You should leave the window open. )
+*** < PASSWORD >  kısmına unutmayacağınız bir şifre belirleyin.) (Replace <PASSWORD> with a password that you will need to keep to restart your node. You should leave the window open. )
 
 Düğümümüzü başlattık.
 
@@ -71,7 +71,7 @@ Client Başlatma. (Start the Client)
 -	cd massa/massa-client/
 -	cargo run --release -- -p "PASSWORD"
 
-*** <PASSWORD> 8. Adımda belirlediğimiz şifreyi kullanabiliriz. (Replace <PASSWORD> with a password that you will need to keep to restart your client)
+*** PASSWORD 8. Adımda belirlediğimiz şifreyi kullanabiliriz. (Replace <PASSWORD> with a password that you will need to keep to restart your client)
 
 
 
