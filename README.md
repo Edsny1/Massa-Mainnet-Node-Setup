@@ -28,7 +28,7 @@ Screen açıyoruz. ( We open the screen)
 
 5-Rustup yükleyelim ( İnstall Rustup )
 -	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
--	1. seçeneği seçiyoruz
+-	1 seçiyoruz
 -	source $HOME/.cargo/env
 Versiyon Kontrol edelim ( Version Control )( Optional)
 -	rustc –version
