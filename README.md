@@ -46,6 +46,7 @@ Versiyon Kontrol edelim ( Version Control )( Optional)
 
 Açılan sayfada ( On the opened page );
 -	[protocol]
+
 routable_ip = "AAA.BBB.CCC.DDD" 
 
 *** ( AAA.BBB.CCC.DDD Sunucu ip adresinizle değiştirilmelidir )
