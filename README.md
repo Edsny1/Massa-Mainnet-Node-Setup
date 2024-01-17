@@ -45,8 +45,7 @@ Versiyon Kontrol edelim ( Version Control )( Optional)
 -	nano massa/massa-node/config/config.toml
 
 Açılan sayfada ( On the opened page );
--	[protocol]
-
+[protocol]
 routable_ip = "AAA.BBB.CCC.DDD" 
 
 *** ( AAA.BBB.CCC.DDD Sunucu ip adresinizle değiştirilmelidir )
