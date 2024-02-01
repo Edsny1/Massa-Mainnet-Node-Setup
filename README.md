@@ -103,6 +103,8 @@ buy_rolls A12dr48yZaL2NpQkwsrpsNLGDpndFUCVSdYdSiQh4UfkYRMo17km 1 0
 Saking:
 -	node_start_staking <your_address>
 
+
+
 Tebrikler Düğümünüz artık çalışıyor. ( Congratulations. Your node is now running)
 
 
