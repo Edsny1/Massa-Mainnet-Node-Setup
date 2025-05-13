@@ -15,7 +15,7 @@ cd
 cd massa/massa-node/
 ```
 ```
-RUST_BACKTRACE=full cargo run --release -- -p ŞİFRE |& tee logs.txt
+RUST_BACKTRACE=full cargo run --release -- -p şifre -a |& tee logs.txt
 ```
 Ctrl A+D
 
