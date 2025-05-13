@@ -6,7 +6,9 @@ cd ..
 ```
 git pull
 ```
+```
 cd
+```
 ```
 cd massa/massa-node/
 ```
